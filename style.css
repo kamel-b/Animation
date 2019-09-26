@@ -1,0 +1,261 @@
+html body{
+    margin: 0;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(#21b4e2, #70ffa0 );
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+   }
+
+   .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   }
+   
+   .middle_msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom : -140%;
+    animation: slideFromBottom 1s ease forwards,
+               slideDown 1s ease 1.5s forwards ;
+
+   }
+
+   .middle_msg > p {
+       color: white;
+       font-size: 1em;
+       font-weight: bold;
+
+   }
+   
+   .logo_white {
+    width: 40%;
+    margin-top: -33%;
+    animation: slideFromTop 0.7s ease forwards,
+               slideDown 1s ease 1.5s forwards ;
+   }
+   
+   .shop_icon_white {
+    width: 35%;
+   }
+   
+   .logo_white_main {
+    width: 20%;
+   }
+
+   .header_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -35%;
+    animation: header 1s ease 2.3s forwards;
+   }
+   
+   .header_text > h1 ,p {
+    color: white;
+    margin: 0;
+    padding: 0;
+    }
+
+.item {
+    width: 25%;
+    position: absolute;
+    top: 25%;
+    left: 150%;
+    z-index: 2;
+    animation: slideFromLeft 0.7s ease 3s forwards;
+    cursor: pointer;
+
+   }
+
+   .bottom_img {
+    width: 35%;
+    vertical-align: top;
+    }
+
+   .background_bottom {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -30%;
+    animation: upBackgroundImage 1s ease 1.7s forwards
+   }
+   
+   .button {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    background-color: #E52B50;
+    border-radius: 30px;
+    justify-content: space-evenly;
+    z-index: 1;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: -10%;
+    animation: button 1s ease 2.3s forwards;
+    cursor: pointer;
+    }
+
+    .icon_btn {
+    width: 10%;
+    margin-left: -50px
+    }
+
+    @media (max-width: 400px){
+        .logo_white{
+            width: 50%;
+            margin-top: -50%;
+        }
+        .logo_white_main{
+            width: 30%
+        }
+        .item{
+            width: 100%;
+            animation: slideFromLeftMobil 0.7s ease 3s forwards;
+        }
+        .bottom_img{
+            width: 100%;
+        }
+        .button{
+            width: 80%;
+        }
+
+        @keyframes slideFromLeftMobil {
+            0%   { left: -150%; }
+            50%  { left: 2%; }
+            100% { left: 0%; }
+        }
+    }
+    @media (max-width:812px) and (orientation:landscape){
+           
+            .middle_msg{
+                animation: slideFromBottomLandscape 1s ease forwards,
+                           slideDown 1s ease 1.5s forwards ;
+
+            }
+            .shop_icon_white{
+                width: 30%;
+            }
+            .logo_white{
+                width: 25%;
+            }
+            .logo_white_main{
+                width: 15%;
+            }
+            .header_text > p, h1{
+                font-size: 0.9em
+            }
+            .item{
+                width: 25%;
+                padding-top:2%; 
+            }
+            .icon_b.header_text{
+                margin-top: -15%;
+            }
+            .icon_btn {  
+                margin: 0
+            }
+
+            @keyframes slideFromBottomLandscape {
+                0%   { margin-bottom: -140%; }
+                50%  { margin-bottom: -35%; }
+                100% { margin-bottom: -40%; }
+            }
+        
+
+    }
+
+
+    @media(min-width:401px) and (max-width:1224px) and (orientation:portrait){
+
+        .middle_msg{
+            width: 30%;
+        }
+        .item{
+            width: 70%;
+            animation: slideFromLeftTablets 0.7s ease 3s forwards;
+        }
+        .button{
+            width: 50%;
+        }
+        @keyframes slideFromLeftTablets {
+            0%   { left: -150%; }
+            50%  { left: 17%; }
+            100% { left: 15%; }
+        }
+    }
+
+     @media(min-width:813px) and (max-width:1224px) and (orientation:landscape){
+      
+        .middle_msg{
+            width: 30%;
+        }
+        .item{
+            width: 50%;
+            animation: slideFromLeftLandscape 0.7s ease 3s forwards;
+        }
+        .button{
+            width: 50%;
+        }
+        @keyframes slideFromLeftLandscape {
+            0%   { left: -150%; }
+            50%  { left: 27%; }
+            100% { left: 25%; }
+        }
+    } 
+
+
+
+    @keyframes slideFromTop {
+        0%   {  margin-top: -33%; }
+        50%  {  margin-top: 10%; }
+        100% {  margin-top: 5%; }
+    }
+
+    @keyframes slideFromBottom {
+        0%   { margin-bottom: -140%; }
+        50%  { margin-bottom: -65%; }
+        100% { margin-bottom: -70%; }
+    }
+
+    
+    @keyframes slideDown{
+        from { transform: translateY(0px) }
+        to { transform: translateY(1000px) }
+    }
+
+    @keyframes upBackgroundImage {
+        0% { bottom: -30%; }
+        100% { bottom: 0%; }
+    }
+
+    @keyframes header {
+        0%   {  top: -30%; }
+        50%  {  top: 5%; }
+        100% {  top: 2%; }
+    }
+
+    @keyframes button {
+        0%   { bottom: -30%; }
+        50%  { bottom: 7%; }
+        100% { bottom: 5%; }
+    }
+    
+    @keyframes slideFromLeft {
+        0%   { left: -150%; }
+        50%  { left: 40%; }
+        100% { left: 38%; }
+    }

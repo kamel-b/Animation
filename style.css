@@ -1,3 +1,6 @@
+/* MAIN CSS */
+
+
 html body{
     margin: 0;
     max-height: 100vh;
@@ -114,7 +117,12 @@ html body{
     margin-left: -50px
     }
 
-    @media (max-width: 400px){
+    /* END OF MAIN CSS */
+
+
+    /* MOBILE CSS PORTRAIT ORIENTATION */
+
+    @media (max-width: 400px) and (orientation:portrait){
         .logo_white{
             width: 50%;
             margin-top: -50%;
@@ -139,7 +147,10 @@ html body{
             100% { left: 0%; }
         }
     }
-    @media (max-width:812px) and (orientation:landscape){
+
+    /* MOBILE CSS LANDSCAPE ORIENTATION  -- IPHONE 4 */
+
+    @media (max-width:480px) and (orientation:landscape){
            
             .middle_msg{
                 animation: slideFromBottomLandscape 1s ease forwards,
@@ -159,8 +170,10 @@ html body{
                 font-size: 0.9em
             }
             .item{
-                width: 25%;
-                padding-top:2%; 
+                width: 35%;
+                padding-top:5%; 
+                animation: slideFromLeftLandscape 0.7s ease 3s forwards;
+
             }
             .icon_b.header_text{
                 margin-top: -15%;
@@ -168,16 +181,24 @@ html body{
             .icon_btn {  
                 margin: 0
             }
-
+            .button{
+                width: 30%
+            }
             @keyframes slideFromBottomLandscape {
                 0%   { margin-bottom: -140%; }
                 50%  { margin-bottom: -35%; }
                 100% { margin-bottom: -40%; }
             }
         
+            @keyframes slideFromLeftLandscape {
+                0%   { left: -150%; }
+                50%  { left: 35%; }
+                100% { left: 32%; }
+            }
 
     }
 
+    /* TABLETS CSS PORTRAIT ORIANTATION */
 
     @media(min-width:401px) and (max-width:1224px) and (orientation:portrait){
 
@@ -191,6 +212,9 @@ html body{
         .button{
             width: 50%;
         }
+        .bottom_img{
+            width: 50%;
+        }
         @keyframes slideFromLeftTablets {
             0%   { left: -150%; }
             50%  { left: 17%; }
@@ -198,25 +222,50 @@ html body{
         }
     }
 
-     @media(min-width:813px) and (max-width:1224px) and (orientation:landscape){
-      
+    /* LANDSCAPE ORIENTATION FOR MEDIUM DEVICES */
+
+     @media(min-width:481px) and (max-width:1224px) and (orientation:landscape){
+         .logo_white{
+             width: 25%
+         }
+        .header_text > h1 , p {
+            font-size: 0.9em;
+        }
+        .logo_white_main{
+            width: 15%;
+        }
         .middle_msg{
-            width: 30%;
+            width: 21%;
+            animation: slideFromBottomLandscapeMedium 1s ease forwards,
+               slideDown 1s ease 1.5s forwards ;
+
         }
         .item{
-            width: 50%;
-            animation: slideFromLeftLandscape 0.7s ease 3s forwards;
+            width: 30%;
+            animation: slideFromLeftLandscapeMedium 0.7s ease 3s forwards;
         }
         .button{
-            width: 50%;
+            width: 30%;
         }
-        @keyframes slideFromLeftLandscape {
+        @keyframes slideFromLeftLandscapeMedium {
             0%   { left: -150%; }
-            50%  { left: 27%; }
-            100% { left: 25%; }
+            50%  { left: 37%; }
+            100% { left: 35%; }
         }
+        @keyframes slideFromBottomLandscapeMedium {
+            0%   { margin-bottom: -140%; }
+            50%  { margin-bottom: -42%; }
+            100% { margin-bottom: -40%; }
+        }
+    
     } 
 
+
+
+
+
+
+    /* MAIN ANIMATION */
 
 
     @keyframes slideFromTop {

@@ -10,7 +10,7 @@ body {
 
 #background-wrap {
     bottom: 0;
-	left: 0;
+	left: -80%;
 	padding-top: 50px;
 	position: fixed;
 	right: 0;
@@ -52,7 +52,7 @@ body {
 .x1 {
 	-webkit-animation: animateCloud 35s linear infinite;
 	-moz-animation: animateCloud 35s linear infinite;
-	animation: animateCloud 30s linear infinite;
+	animation: animateCloud 30s linearinfinite;
 	
 	-webkit-transform: scale(0.65);
 	-moz-transform: scale(0.65);
@@ -82,7 +82,7 @@ body {
 .x4 {
 	-webkit-animation: animateCloud 18s linear infinite;
 	-moz-animation: animateCloud 18s linear infinite;
-	animation: animateCloud 13s linear infinite;
+	animation: animateCloud 13s linear  infinite;
 	
 	-webkit-transform: scale(0.4);
 	-moz-transform: scale(0.4);
